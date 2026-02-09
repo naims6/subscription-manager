@@ -20,10 +20,12 @@ const userScema = new Schema(
     password: {
       type: String,
       required: [true, "Password is required"],
-      minLength: 6,
+      minlength: [6, "Password must be at least 6 characters"],
     },
   },
   { timestamps: true },
 );
 
-export default mongoose.models.User || mongoose.model("User", userScema);
+const User = mongoose.models.User || mongoose.model("User", userScema);
+
+export default User;

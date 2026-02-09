@@ -90,7 +90,7 @@ subscriptionSchema.pre("save", function (next) {
     };
 
     // Calculate renewal date based on the start date and frequency
-    this.renewalDate = new Date(this.stratDate);
+    this.renewalDate = new Date(this.stratDate); // here is error
     this.renewalDate.setDate(
       this.renewalDate.getDate() + renewalPeriods[this.frequency],
     );
