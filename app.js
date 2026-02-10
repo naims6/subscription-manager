@@ -6,13 +6,13 @@ import userRouter from "./routes/user.routes.js";
 import authRouter from "./routes/auth.routes.js";
 import subscriptionRouter from "./routes/subscription.routes.js";
 import errorMiddleware from "./middlewares/error.middleware.js";
-import arcjetMiddleware from "./middlewares/arcjet.middleware.js";
+// import arcjetMiddleware from "./middlewares/arcjet.middleware.js";
 import cookieParser from "cookie-parser";
 
 const app = express();
 app.use(express.json());
 app.use(errorMiddleware);
-app.use(arcjetMiddleware)
+// app.use(arcjetMiddleware)
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser()) 
 
